@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Window.postMessage()のデモ</title>
+<style>
+input { width: 50% ; font-size: 16px ; }
+</style>
+</head>
+<body>
+<p><input id="hoge" value="SYNCER"></p>
+<p><button id="run">メッセージを送信</button></p>
+<script>
+document.getElementById( "run" ).onclick = function() {
+    var message = document.getElementById( "hoge" ).value ;
+    parent.postMessage( message, "*" ) ;
+}
+</script>
+</body>
+</html>
